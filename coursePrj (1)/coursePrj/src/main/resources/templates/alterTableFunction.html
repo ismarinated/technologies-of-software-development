@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Функция 1</h1><hr>
+День транзакции был выделен в отдельную колонку в талице транзакций, данные таблицы сохранены в файл transactions_updated.csv и загружены на рабочий стол.<br><br>
+<br>
+<form th:method="POST"  th:action="@{/backToFunctions}">
+    <input type="submit" value="Функции"/>
+</form>
+</body>
+</html>

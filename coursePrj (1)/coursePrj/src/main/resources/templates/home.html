@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"/>
+</head>
+<body>
+    <h1>Загрузка csv файлов</h1><hr>
+    <form th:method="POST" th:action="@{/upload}" enctype="multipart/form-data">
+        <label>Выберите файл transactions.csv </label>
+        <input type="file" name="file" accept=".csv"/><br><br>
+        <label>Выберите файл gender_train.csv </label>
+        <input type="file" name="file" accept=".csv"/><br><br>
+        <label>Выберите файл tr_mcc_codes.csv </label>
+        <input type="file" name="file" accept=".csv"/><br><br>
+        <label>Выберите файл tr_types.csv </label>
+        <input type="file" name="file" accept=".csv"/><br><br>
+        <input type="submit" value="Импортировать"/><br><br>
+    </form>
+    <br>
+    <form th:method="POST"  th:action="@{/functions}">
+        <input type="submit" value="Функции"/>
+    </form>
+</body>
+</html>

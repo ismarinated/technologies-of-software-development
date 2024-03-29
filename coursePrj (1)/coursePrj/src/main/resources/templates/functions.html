@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Реализуемый функционал</h1><hr>
+<a href="/functions/alterFunction">Функция 1</a>
+: выделиние дня транзакции в отдельную колонку в таблице транзакций.<br><br>
+<a href="/functions/getAvgAmountFunction">Функция 2</a>
+: вывод средних значений по полю amount, сгруппировав данные по дню, а в рамках дня по MCC коду с условием частоты его встречаемости.<br><br>
+<br>
+<form th:method="POST"  th:action="@{/backToHome}">
+    <input type="submit" value="Главная страница"/>
+</form>
+</body>
+</html>

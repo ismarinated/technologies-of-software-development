@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Функция 2</h1><hr>
+<table>
+    <thead>
+    <tr>
+        <th>
+            Average amount
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${List}">
+        <td><span th:text="${item}">Average amount</span></td>
+    </tr>
+    </tbody>
+</table><br>
+Значения были сохранены в файл avg_amount.csv и загружены на рабочий стол.<br><br>
+<br>
+<form th:method="POST"  th:action="@{/backToFunctions}">
+    <input type="submit" value="Функции"/>
+</form>
+</body>
+</html>
